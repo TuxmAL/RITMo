@@ -14,3 +14,14 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+
+
+ActiveSupport::Inflector.inflections do |inflect|
+   inflect.plural /^(.+)([cg])o$/i, '\1\2hi'
+   inflect.plural /^(.+)([^cg])o$/i, '\1\2i'
+   inflect.plural /^(.+)([cg])a$/i, '\1\2he'
+   inflect.plural /^(.+)([^cg])a$/i, '\1\2e'
+   inflect.singular /^(.+)i$/i, '\1o'
+   inflect.singular /^(.+)e$/i, '\1a'
+   inflect.irregular 'stato_civile', 'stati_civili'
+end
