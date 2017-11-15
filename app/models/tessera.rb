@@ -1,0 +1,2 @@
+class Tessera < ApplicationRecord
+end

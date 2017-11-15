@@ -1,0 +1,2 @@
+class StatoCivile < ApplicationRecord
+end
