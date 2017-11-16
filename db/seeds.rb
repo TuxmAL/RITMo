@@ -47,7 +47,7 @@ Qualifica.create([{id: 1, qualifica: 'Dirigente'},
                   {id: 37, qualifica: 'Area Amministrativa Gestionale'},
                   {id: 38, qualifica: 'Area Medico-Odontoiatrica e Socio Sanitaria'}
                  ])
-Tessera.create([{id: 1, tipo: 'Uso personale'}, {id: 2, tipo: 'Familiari'}])
+TipoTessera.create([{id: 1, tipo: 'Uso personale'}, {id: 2, tipo: 'Familiari'}])
 
 StatoCivile.create([{id: 1, :stato 'Celibe', :sesso_id 1},
                     {id: 2, :stato 'Nubile', :sesso_id 2},

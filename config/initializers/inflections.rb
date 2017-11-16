@@ -25,4 +25,5 @@ ActiveSupport::Inflector.inflections do |inflect|
    inflect.singular /^(.+)i$/i, '\1o'
    inflect.singular /^(.+)e$/i, '\1a'
    inflect.irregular 'stato_civile', 'stati_civili'
+   inflect.irregular 'tipo_tessera', 'tipi_tessere'
 end
