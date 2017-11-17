@@ -1,0 +1,195 @@
+<%= form_for @tessera, :html => { :class => "form-horizontal tessera" } do |f| %>
+
+  <% if @tessera.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@tessera.errors.count, "error") %> prohibited this tessera from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @tessera.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :tiporichiesta_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :tiporichiesta_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:tiporichiesta_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :anagrafico_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :anagrafico_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:anagrafico_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :tipo_tessera_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :tipo_tessera_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:tipo_tessera_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :intestatario_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :intestatario_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:intestatario_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :qualifica_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :qualifica_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:qualifica_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :statura, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :statura, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:statura) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :string, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :string, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:string) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :capelli, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :capelli, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:capelli) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :occhi, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :occhi, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:occhi) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :segni_particolari, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :segni_particolari, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:segni_particolari) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :residenza_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :residenza_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:residenza_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :indirizzo, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :indirizzo, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:indirizzo) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :statocivile_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :statocivile_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:statocivile_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :numero_tessera, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :numero_tessera, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:numero_tessera) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :integer, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :integer, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:integer) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :data_rilascio, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :data_rilascio, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:data_rilascio) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :data_convalida, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :data_convalida, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:data_convalida) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :variazioni_uno, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :variazioni_uno, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:variazioni_uno) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :variazioni_due, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :variazioni_due, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:variazioni_due) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :variazioni_tre, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :variazioni_tre, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:variazioni_tre) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :note, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :note, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:note) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :annullata, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :annullata, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:annullata) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :stampata, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :stampata, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:stampata) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :utente_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :utente_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:utente_id) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                tessere_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

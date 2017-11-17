@@ -1,0 +1,2 @@
+json.extract! tessera, :id, :id, :tiporichiesta_id, :anagrafico_id, :tipo_tessera_id, :intestatario_id, :qualifica_id, :statura, :string, :capelli, :occhi, :segni_particolari, :residenza_id, :indirizzo, :statocivile_id, :numero_tessera, :integer, :data_rilascio, :data_convalida, :variazioni_uno, :variazioni_due, :variazioni_tre, :note, :annullata, :stampata, :utente_id, :created_at, :updated_at
+json.url tessera_url(tessera, format: :json)

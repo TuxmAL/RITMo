@@ -1,0 +1,72 @@
+<%= form_with(model: anagrafica, local: true) do |form| %>
+  <% if anagrafica.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(anagrafica.errors.count, "error") %> prohibited this anagrafica from being saved:</h2>
+
+      <ul>
+      <% anagrafica.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.text_field :id, id: :anagrafica_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :anagrafica_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cognome %>
+    <%= form.text_field :cognome, id: :anagrafica_cognome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sesso_id %>
+    <%= form.text_field :sesso_id, id: :anagrafica_sesso_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :luogonascita_id %>
+    <%= form.text_field :luogonascita_id, id: :anagrafica_luogonascita_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :datanascita %>
+    <%= form.date_select :datanascita, id: :anagrafica_datanascita %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parente_id %>
+    <%= form.text_field :parente_id, id: :anagrafica_parente_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parentela_id %>
+    <%= form.text_field :parentela_id, id: :anagrafica_parentela_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recapiti %>
+    <%= form.text_field :recapiti, id: :anagrafica_recapiti %>
+  </div>
+
+  <div class="field">
+    <%= form.label :note %>
+    <%= form.text_area :note, id: :anagrafica_note %>
+  </div>
+
+  <div class="field">
+    <%= form.label :utente_id %>
+    <%= form.text_field :utente_id, id: :anagrafica_utente_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -2,8 +2,54 @@
 
 one:
   id: 
-  tipo: MyString
+  tiporichiesta: one
+  anagrafico: one
+  tipo_tessera: one
+  intestatario: one
+  qualifica: one
+  statura: MyString
+  string: MyString
+  capelli: MyString
+  occhi: MyString
+  segni_particolari: MyString
+  residenza: one
+  indirizzo: MyString
+  statocivile: one
+  numero_tessera: MyString
+  integer: MyString
+  data_rilascio: 2017-11-16
+  data_convalida: 2017-11-16
+  variazioni_uno: MyText
+  variazioni_due: MyText
+  variazioni_tre: MyText
+  note: MyText
+  annullata: false
+  stampata: false
+  utente: one
 
 two:
   id: 
-  tipo: MyString
+  tiporichiesta: two
+  anagrafico: two
+  tipo_tessera: two
+  intestatario: two
+  qualifica: two
+  statura: MyString
+  string: MyString
+  capelli: MyString
+  occhi: MyString
+  segni_particolari: MyString
+  residenza: two
+  indirizzo: MyString
+  statocivile: two
+  numero_tessera: MyString
+  integer: MyString
+  data_rilascio: 2017-11-16
+  data_convalida: 2017-11-16
+  variazioni_uno: MyText
+  variazioni_due: MyText
+  variazioni_tre: MyText
+  note: MyText
+  annullata: false
+  stampata: false
+  utente: two

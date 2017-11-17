@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Anagrafiche</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Cognome</th>
+      <th>Sesso</th>
+      <th>Luogonascita</th>
+      <th>Datanascita</th>
+      <th>Parente</th>
+      <th>Parentela</th>
+      <th>Recapiti</th>
+      <th>Note</th>
+      <th>Utente</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @anagrafiche.each do |anagrafica| %>
+      <tr>
+        <td><%= anagrafica.id %></td>
+        <td><%= anagrafica.nome %></td>
+        <td><%= anagrafica.cognome %></td>
+        <td><%= anagrafica.sesso %></td>
+        <td><%= anagrafica.luogonascita %></td>
+        <td><%= anagrafica.datanascita %></td>
+        <td><%= anagrafica.parente %></td>
+        <td><%= anagrafica.parentela %></td>
+        <td><%= anagrafica.recapiti %></td>
+        <td><%= anagrafica.note %></td>
+        <td><%= anagrafica.utente %></td>
+        <td><%= link_to 'Show', anagrafica %></td>
+        <td><%= link_to 'Edit', edit_anagrafica_path(anagrafica) %></td>
+        <td><%= link_to 'Destroy', anagrafica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New anagrafica', new_anagrafica_path %>

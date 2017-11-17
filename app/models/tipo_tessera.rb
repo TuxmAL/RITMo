@@ -1,0 +1,2 @@
+class TipoTessera < ApplicationRecord
+end

@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tessere</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Tiporichiesta</th>
+      <th>Anagrafico</th>
+      <th>Tipo tessera</th>
+      <th>Intestatario</th>
+      <th>Qualifica</th>
+      <th>Statura</th>
+      <th>String</th>
+      <th>Capelli</th>
+      <th>Occhi</th>
+      <th>Segni particolari</th>
+      <th>Residenza</th>
+      <th>Indirizzo</th>
+      <th>Statocivile</th>
+      <th>Numero tessera</th>
+      <th>Integer</th>
+      <th>Data rilascio</th>
+      <th>Data convalida</th>
+      <th>Variazioni uno</th>
+      <th>Variazioni due</th>
+      <th>Variazioni tre</th>
+      <th>Note</th>
+      <th>Annullata</th>
+      <th>Stampata</th>
+      <th>Utente</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tessere.each do |tessera| %>
+      <tr>
+        <td><%= tessera.id %></td>
+        <td><%= tessera.tiporichiesta %></td>
+        <td><%= tessera.anagrafico %></td>
+        <td><%= tessera.tipo_tessera %></td>
+        <td><%= tessera.intestatario %></td>
+        <td><%= tessera.qualifica %></td>
+        <td><%= tessera.statura %></td>
+        <td><%= tessera.string %></td>
+        <td><%= tessera.capelli %></td>
+        <td><%= tessera.occhi %></td>
+        <td><%= tessera.segni_particolari %></td>
+        <td><%= tessera.residenza %></td>
+        <td><%= tessera.indirizzo %></td>
+        <td><%= tessera.statocivile %></td>
+        <td><%= tessera.numero_tessera %></td>
+        <td><%= tessera.integer %></td>
+        <td><%= tessera.data_rilascio %></td>
+        <td><%= tessera.data_convalida %></td>
+        <td><%= tessera.variazioni_uno %></td>
+        <td><%= tessera.variazioni_due %></td>
+        <td><%= tessera.variazioni_tre %></td>
+        <td><%= tessera.note %></td>
+        <td><%= tessera.annullata %></td>
+        <td><%= tessera.stampata %></td>
+        <td><%= tessera.utente %></td>
+        <td><%= link_to 'Show', tessera %></td>
+        <td><%= link_to 'Edit', edit_tessera_path(tessera) %></td>
+        <td><%= link_to 'Destroy', tessera, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tessera', new_tessera_path %>

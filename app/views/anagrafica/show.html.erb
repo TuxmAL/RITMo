@@ -1,0 +1,37 @@
+<%- model_class = Anagrafica -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:nome) %>:</strong></dt>
+  <dd><%= @anagrafica.nome %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cognome) %>:</strong></dt>
+  <dd><%= @anagrafica.cognome %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sesso_id) %>:</strong></dt>
+  <dd><%= @anagrafica.sesso_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:luogonascita_id) %>:</strong></dt>
+  <dd><%= @anagrafica.luogonascita_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:datanascita) %>:</strong></dt>
+  <dd><%= @anagrafica.datanascita %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:parente_id) %>:</strong></dt>
+  <dd><%= @anagrafica.parente_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:parentela_id) %>:</strong></dt>
+  <dd><%= @anagrafica.parentela_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:recapiti) %>:</strong></dt>
+  <dd><%= @anagrafica.recapiti %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:note) %>:</strong></dt>
+  <dd><%= @anagrafica.note %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:utente_id) %>:</strong></dt>
+  <dd><%= @anagrafica.utente_id %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              anagrafiche_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_anagrafica_path(@anagrafica), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              anagrafica_path(@anagrafica),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

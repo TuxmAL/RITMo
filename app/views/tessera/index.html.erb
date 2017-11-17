@@ -1,0 +1,84 @@
+<%- model_class = Tessera -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:tiporichiesta_id) %></th>
+      <th><%= model_class.human_attribute_name(:anagrafico_id) %></th>
+      <th><%= model_class.human_attribute_name(:tipo_tessera_id) %></th>
+      <th><%= model_class.human_attribute_name(:intestatario_id) %></th>
+      <th><%= model_class.human_attribute_name(:qualifica_id) %></th>
+      <th><%= model_class.human_attribute_name(:statura) %></th>
+      <th><%= model_class.human_attribute_name(:string) %></th>
+      <th><%= model_class.human_attribute_name(:capelli) %></th>
+      <th><%= model_class.human_attribute_name(:occhi) %></th>
+      <th><%= model_class.human_attribute_name(:segni_particolari) %></th>
+      <th><%= model_class.human_attribute_name(:residenza_id) %></th>
+      <th><%= model_class.human_attribute_name(:indirizzo) %></th>
+      <th><%= model_class.human_attribute_name(:statocivile_id) %></th>
+      <th><%= model_class.human_attribute_name(:numero_tessera) %></th>
+      <th><%= model_class.human_attribute_name(:integer) %></th>
+      <th><%= model_class.human_attribute_name(:data_rilascio) %></th>
+      <th><%= model_class.human_attribute_name(:data_convalida) %></th>
+      <th><%= model_class.human_attribute_name(:variazioni_uno) %></th>
+      <th><%= model_class.human_attribute_name(:variazioni_due) %></th>
+      <th><%= model_class.human_attribute_name(:variazioni_tre) %></th>
+      <th><%= model_class.human_attribute_name(:note) %></th>
+      <th><%= model_class.human_attribute_name(:annullata) %></th>
+      <th><%= model_class.human_attribute_name(:stampata) %></th>
+      <th><%= model_class.human_attribute_name(:utente_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tessere.each do |tessera| %>
+      <tr>
+        <td><%= link_to tessera.id, tessera_path(tessera) %></td>
+        <td><%= tessera.tiporichiesta_id %></td>
+        <td><%= tessera.anagrafico_id %></td>
+        <td><%= tessera.tipo_tessera_id %></td>
+        <td><%= tessera.intestatario_id %></td>
+        <td><%= tessera.qualifica_id %></td>
+        <td><%= tessera.statura %></td>
+        <td><%= tessera.string %></td>
+        <td><%= tessera.capelli %></td>
+        <td><%= tessera.occhi %></td>
+        <td><%= tessera.segni_particolari %></td>
+        <td><%= tessera.residenza_id %></td>
+        <td><%= tessera.indirizzo %></td>
+        <td><%= tessera.statocivile_id %></td>
+        <td><%= tessera.numero_tessera %></td>
+        <td><%= tessera.integer %></td>
+        <td><%= tessera.data_rilascio %></td>
+        <td><%= tessera.data_convalida %></td>
+        <td><%= tessera.variazioni_uno %></td>
+        <td><%= tessera.variazioni_due %></td>
+        <td><%= tessera.variazioni_tre %></td>
+        <td><%= tessera.note %></td>
+        <td><%= tessera.annullata %></td>
+        <td><%= tessera.stampata %></td>
+        <td><%= tessera.utente_id %></td>
+        <td><%=l tessera.created_at %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      tessera_path(tessera), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_tessera_path(tessera), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      tessera_path(tessera),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_tessera_path,
+            :class => 'btn btn-primary' %>
