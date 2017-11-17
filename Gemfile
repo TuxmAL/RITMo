@@ -12,9 +12,8 @@ gem 'rails', '~> 5.1.4'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 
+# Used for internationalization (needed?)
 gem 'rails-i18n'
-
-
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -36,6 +35,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Use Bootstrap stylesheets
+gem "twitter-bootstrap-rails"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -51,6 +53,8 @@ group :development, :test do
 end
 
 group :development do
+  # Add favicon for all the flavours from https://realfavicongenerator.net/
+  gem 'rails_real_favicon'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
