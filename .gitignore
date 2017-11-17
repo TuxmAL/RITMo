@@ -18,3 +18,7 @@
 
 .byebug_history
 .directory
+/doc
+*.zip
+*.bz2
+db/*.sqlite3
