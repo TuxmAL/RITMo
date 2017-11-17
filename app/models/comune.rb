@@ -1,0 +1,2 @@
+class Comune < ApplicationRecord
+end

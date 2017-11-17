@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codice: 1
+  comune: MyString
+  cap: MyString
+  provincia: MyString
+  istat: MyString
+  provincia_id: 1
+
+two:
+  codice: 1
+  comune: MyString
+  cap: MyString
+  provincia: MyString
+  istat: MyString
+  provincia_id: 1
