@@ -49,24 +49,24 @@ Qualifica.create([{id: 1, qualifica: 'Dirigente'},
                  ])
 TipoTessera.create([{id: 1, tipo: 'Uso personale'}, {id: 2, tipo: 'Familiari'}])
 
-StatoCivile.create([{id: 1, :stato 'Celibe', :sesso_id 1},
-                    {id: 2, :stato 'Nubile', :sesso_id 2},
-                    {id: 3, :stato 'Coniugato', :sesso_id 1},
-                    {id: 4, :stato 'Coniugata', :sesso_id 2},
-                    {id: 5, :stato 'Vedovo', :sesso_id 1},
-                    {id: 6, :stato 'Vedova', :sesso_id 2},
-                    {id: 7, :stato 'Divorziato', :sesso_id 1},
-                    {id: 8, :stato 'Divorziata', :sesso_id 2},
-                    {id: 9, :stato 'Libero', :sesso_id 1},
-                    {id: 10, :stato 'Libera', :sesso_id 2},
-                    {id: 11, :stato 'Omissis a.35 DPR 445/2000', :sesso_id 1},
-                    {id: 12, :stato 'Omissis a.35 DPR 445/2000', :sesso_id 2}
+StatoCivile.create([{id: 1, stato: 'Celibe', sesso_id: 1},
+                    {id: 2, stato: 'Nubile', sesso_id: 2},
+                    {id: 3, stato: 'Coniugato', sesso_id: 1},
+                    {id: 4, stato: 'Coniugata', sesso_id: 2},
+                    {id: 5, stato: 'Vedovo', sesso_id: 1},
+                    {id: 6, stato: 'Vedova', sesso_id: 2},
+                    {id: 7, stato: 'Divorziato', sesso_id: 1},
+                    {id: 8, stato: 'Divorziata', sesso_id: 2},
+                    {id: 9, stato: 'Libero', sesso_id: 1},
+                    {id: 10, stato: 'Libera', sesso_id: 2},
+                    {id: 11, stato: 'Omissis a.35 DPR 445/2000', sesso_id: 1},
+                    {id: 12, stato: 'Omissis a.35 DPR 445/2000', sesso_id: 2}
                   ])
-Richiesta.create([{id: 1, :richiesta 'Nuova tessera'}, {id: 2, :richiesta 'Variazione/Proroga', :sesso_id 2}
+Richiesta.create([{id: 1, richiesta: 'Nuova tessera'}, {id: 2, richiesta: 'Variazione/Proroga'}
                  ])
 
 Parentela.create([{id: 1, parentela: 'Marito' },
                   {id: 2, parentela: 'Moglie' },
                   {id: 3, parentela: 'Figlio' },
                   {id: 4, parentela: 'Figlia' }
-                 })
+                 ])
