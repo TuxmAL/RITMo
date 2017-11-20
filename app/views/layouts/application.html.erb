@@ -51,12 +51,26 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">RiTMATo</a>
+        <a class="navbar-brand" href="#">RiTMo</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Anagrafiche<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to raw('<i class="fa fa-user"></i> Anagrafica</a>'), anagrafiche_path %></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><i class="fa fa-bullseye"></i> Comuni</a></li>
+                <li role="separator" class="divider"></li>
+                <li><%= link_to raw('<i class="fa fa-user-secret"></i> Utenti</a>'), utenti_path %></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tessere<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to raw('<i class="fa fa-id-card-o"></i> Emetti'), tessere_path %></li>
+                <li><%= link_to raw('<i class="fa fa-print"></i> Ristampa'), '#' %></li>
+                <li role="separator" class="divider"></li>
+                <li><%= link_to raw('<i class="fa fa-list-alt"></i> Elenco emissioni'), '#' %></li>
           </ul>
         </div>
       </div>
@@ -64,10 +78,11 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-12">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
+<!--
         <div class="col-lg-3">
           <div class="well sidebar-nav">
             <h3>Sidebar</h3>
@@ -77,8 +92,9 @@
               <li><%= link_to "Link2", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
+          </div>
+        </div>
+        -->
       </div><!--/row-->
 
       <footer>
