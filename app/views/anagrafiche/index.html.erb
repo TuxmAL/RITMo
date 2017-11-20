@@ -34,14 +34,23 @@
         <td><%= anagrafica.recapiti %></td>
         <td><%= anagrafica.note %></td>
         <td><%= anagrafica.utente %></td>
-        <td><%= link_to 'Show', anagrafica %></td>
-        <td><%= link_to 'Edit', edit_anagrafica_path(anagrafica) %></td>
-        <td><%= link_to 'Destroy', anagrafica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      anagrafica, :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_anagrafica_path(anagrafica), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      anagrafica,
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+        </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New anagrafica', new_anagrafica_path %>
+<<%= link_to t('.new', :default => t("helpers.links.new")), new_anagrafica_path, :class => 'btn btn-primary' %>
+<br>

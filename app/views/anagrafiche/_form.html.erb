@@ -1,72 +1,96 @@
-<%= form_with(model: anagrafica, local: true) do |form| %>
-  <% if anagrafica.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(anagrafica.errors.count, "error") %> prohibited this anagrafica from being saved:</h2>
-
-      <ul>
-      <% anagrafica.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @anagrafica, :html => { :class => "form-horizontal anagrafica" } do |f| %>
+  <% if @anagrafica.errors.any? %>
+    <div id="error_explanation" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(anagrafica.errors.count, "error") %> non hanno permesso di salvare questa anagrafica:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @anagrafica.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :id %>
-    <%= form.text_field :id, id: :anagrafica_id %>
+    <div class="form-group">
+    <%= f.label :nome, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :nome, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:nome) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cognome, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :cognome, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:cognome) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sesso_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sesso_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sesso_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :luogonascita_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :luogonascita_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:luogonascita_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :datanascita, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :datanascita, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:datanascita) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :parente_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :parente_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:parente_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :parentela_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :parentela_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:parentela_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :recapiti, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :recapiti, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:recapiti) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :note, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_area :note, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:note) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :utente_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :utente_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:utente_id) %>
   </div>
 
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome, id: :anagrafica_nome %>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                anagrafiche_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :cognome %>
-    <%= form.text_field :cognome, id: :anagrafica_cognome %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sesso_id %>
-    <%= form.text_field :sesso_id, id: :anagrafica_sesso_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :luogonascita_id %>
-    <%= form.text_field :luogonascita_id, id: :anagrafica_luogonascita_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :datanascita %>
-    <%= form.date_select :datanascita, id: :anagrafica_datanascita %>
-  </div>
-
-  <div class="field">
-    <%= form.label :parente_id %>
-    <%= form.text_field :parente_id, id: :anagrafica_parente_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :parentela_id %>
-    <%= form.text_field :parentela_id, id: :anagrafica_parentela_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :recapiti %>
-    <%= form.text_field :recapiti, id: :anagrafica_recapiti %>
-  </div>
-
-  <div class="field">
-    <%= form.label :note %>
-    <%= form.text_area :note, id: :anagrafica_note %>
-  </div>
-
-  <div class="field">
-    <%= form.label :utente_id %>
-    <%= form.text_field :utente_id, id: :anagrafica_utente_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
