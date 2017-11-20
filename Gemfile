@@ -53,6 +53,10 @@ group :development, :test do
 end
 
 group :development do
+  # nice gems for irb, remember to require it into irb or add to .irbrc
+  gem 'interactive_editor'
+  gem 'map_by_method'
+
   # Add favicon for all the flavours from https://realfavicongenerator.net/
   gem 'rails_real_favicon'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
