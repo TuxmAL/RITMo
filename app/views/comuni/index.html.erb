@@ -5,33 +5,30 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th colspan="2"><%= model_class.human_attribute_name(:comune) %></th>
       <th><%= model_class.human_attribute_name(:codice) %></th>
-      <th><%= model_class.human_attribute_name(:comune) %></th>
       <th><%= model_class.human_attribute_name(:cap) %></th>
       <th><%= model_class.human_attribute_name(:provincia) %></th>
       <th><%= model_class.human_attribute_name(:istat) %></th>
-      <th><%= model_class.human_attribute_name(:provincia_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th>Capoluogo</th>
+      <th colspan="2"><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @comuni.each do |comune| %>
       <tr>
-        <td><%= link_to comune.id, comune_path(comune) %></td>
+        <td><%= link_to raw('<i class="fa fa-bullseye fa-2x"></i>'), comune, :class => 'btn btn-default btn-xs' %></td>
+        <td><%= link_to comune.comune, comune %></td>
         <td><%= comune.codice %></td>
-        <td><%= comune.comune %></td>
         <td><%= comune.cap %></td>
         <td><%= comune.provincia %></td>
         <td><%= comune.istat %></td>
-        <td><%= comune.provincia_id %></td>
-        <td><%=l comune.created_at %></td>
+        <td><%= comune.capoluogo %></td>
         <td>
-          <%= link_to t('.show', :default => t("helpers.links.show")),
-                      comune_path(comune), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_comune_path(comune), :class => 'btn btn-default btn-xs' %>
+        </td>
+        <td>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       comune_path(comune),
                       :method => :delete,
