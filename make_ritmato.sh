@@ -1,5 +1,5 @@
 rvm use 2.4.1
-rails new RiTMATo -d mysql
+rails new RiTMo -d mysql
 rake time:zones
 bundle install
 rails generate model sesso sesso:string
