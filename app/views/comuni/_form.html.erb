@@ -1,0 +1,69 @@
+<%= form_for @comune, :html => { :class => "form-horizontal comune" } do |f| %>
+
+  <% if @comune.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@comune.errors.count, "error") %> prohibited this comune from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @comune.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :codice, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :codice, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:codice) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :comune, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :comune, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:comune) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cap, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :cap, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:cap) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :provincia, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :provincia, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:provincia) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :istat, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :istat, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:istat) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :provincia_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :provincia_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:provincia_id) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                comuni_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>
