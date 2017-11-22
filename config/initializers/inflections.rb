@@ -29,4 +29,5 @@ ActiveSupport::Inflector.inflections do |inflect|
    inflect.irregular 'utente', 'utenti'
    inflect.irregular 'stato_civile', 'stati_civili'
    inflect.irregular 'tipo_tessera', 'tipi_tessere'
+   inflect.irregular 'comune', 'comuni'
 end
