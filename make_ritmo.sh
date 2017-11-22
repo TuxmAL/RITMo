@@ -17,7 +17,8 @@ rails generate bootstrap:install static
 rails generate bootstrap:layout
 rake db:migrate
 rake db:seed
-rails generate bootstrap:themed utente
-rails generate bootstrap:themed anagrafica
-rails generate bootstrap:themed tessera
+rails generate bootstrap:themed utenti
+rails generate bootstrap:themed anagrafiche
+rails generate bootstrap:themed tessere
+rails generate bootstrap:themed comuni
 
