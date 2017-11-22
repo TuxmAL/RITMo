@@ -1,11 +1,88 @@
 body {
   background-color: #fff;
   color: #333;
-  margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
+
+header {
+  font-size: XX-large;
+  font-variant: small-caps;
+  font-style: oblique;
+  vertical-align: middle;
+  letter-spacing: 4pt;
+  height: 100px;
+  background-color: #809DBD;
+  text-align: center; 
+}
+
+.version {
+    letter-spacing: 3px;
+    font-style: italic;
+    color: coral;
+    font-size: small;
+}
+
+.navbar-default {
+  background-color: white;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover,
+.nav-tabs > li > a:focus {
+  color: rgb(50,119,174);
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover, .nav-tabs > li > a:hover {
+  color: rgb(50,119,174);
+  background-color: whitesmoke;
+}
+
+ul.navbar-nav {
+  font-size: 16px;
+  background-color: white;
+}
+
+ul.navbar-nav a:hover {
+  text-decoration: none;
+  color: rgb(50, 119, 174);
+  background-color: whitesmoke;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #cdf7cd;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: #f9f9f9;
+}
+
+.table-nonfluid {
+  width: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* aggiungiamo spzio per un icona agli alert */
+.alert .fa {
+    display:table-cell;
+}
+
+.alert div,
+.alert span,
+.alert i {
+    padding-left: 5px;
+    display:table-cell;
+}
+
+div a:hover {
+  text-decoration: none;
+  color: rgb(50, 119, 174);
+  background-color: transparent;
+}
+
+/**** default ***/
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -25,11 +102,12 @@ a {
   &:visited {
     color: #666;
   }
-
+/*
   &:hover {
     color: #fff;
     background-color: #000;
   }
+  */
 }
 
 th {
@@ -81,4 +159,39 @@ div {
 
 label {
   display: block;
+}
+
+footer {
+  clear: both;
+  color: whitesmoke;
+  background-color: #555555;
+  vertical-align: bottom;
+  font-size: small;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+footer a {
+  color: #C0C0C0;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color:#E0E0E0;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.with-bar {
+  border-left-color: rgb(204, 204, 204);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: rgb(204, 204, 204);
+  border-right-style: solid;
+  border-right-width: 1px;
+
+}
+.footer-container {
+    margin-left: 120px;
+    margin-right: 120px;
 }

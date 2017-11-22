@@ -43,6 +43,10 @@
     <![endif]-->
   </head>
   <body>
+    <header>
+      <%= link_to image_tag('logo_vanvitelli.png', :alt => 'Università degli Studi della Campania Luigi Vanvitelli', :title => 'Università degli studi della Campania Luigi Vanvitelli'), '/index.html', :title => 'Ritorna al portale' %>
+        Rilascio Tessere Ministeriali <sub><span class="version">v<%= MYAPP_VERSION %></span></sub>
+    </header>
 
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -94,29 +98,28 @@
             </ul>
           </div>
         </div>
-        -->
+-->
       </div><!--/row-->
-
-      <footer>
-        <div class="row">
-          <div class="col-sm-4 col-md-4 small">
-            <p style="text-transform: uppercase">Universit&agrave; degli Studi della Campania<br/>Luigi Vanvitelli</p>
-            <p>Viale Abramo Lincoln n. 5<br/>81100 Caserta<br/>P.IVA: 02044190615</p>
-            <p><a href="mailto:protocollo@pec.unina2.it">protocollo@pec.unicampania.it</a></p>
-          </div>
-          <div class="col-sm-4 col-md-4 hidden-xs small with-bar">
-            <p></p><p></p>
-            <p>Progetto e sviluppo a cura dell'Ufficio Gestione del Personale Tecnico-Amministrativo<br/>Tutti i diritti riservati</p>
-            <p></p><p></p>
-          </div>
-          <div class="col-sm-4 col-md-4 hidden-sm hidden-xs small">
-            <p></p><p></p><p>Per qualsiasi problema, malfunzionamento o segnalazione inviare una mail a <a href="mailto:ugpta@unicampania.it?subject=PortaleUGPTA">ugpta@unicampania.it</a></p>
-            <p></p><p></p>
-          </div>
-        </div>
-      </footer>
-
     </div> <!-- /container -->
+
+    <footer>
+      <div class="row">
+        <div class="col-sm-4 col-md-4 small">
+          <p style="text-transform: uppercase">Universit&agrave; degli Studi della Campania<br/>Luigi Vanvitelli</p>
+          <p>Viale Abramo Lincoln n. 5<br/>81100 Caserta<br/>P.IVA: 02044190615</p>
+          <p><a href="mailto:protocollo@pec.unina2.it">protocollo@pec.unicampania.it</a></p>
+        </div>
+        <div class="col-sm-4 col-md-4 hidden-xs small with-bar">
+          <p></p><p></p>
+          <p>Progetto e sviluppo a cura dell'Ufficio Gestione del Personale Tecnico-Amministrativo<br/>Tutti i diritti riservati</p>
+          <p></p><p></p>
+        </div>
+        <div class="col-sm-4 col-md-4 hidden-sm hidden-xs small">
+          <p></p><p></p><p>Per qualsiasi problema, malfunzionamento o segnalazione inviare una mail a <a href="mailto:ugpta@unicampania.it?subject=PortaleUGPTA">ugpta@unicampania.it</a></p>
+          <p></p><p></p>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
