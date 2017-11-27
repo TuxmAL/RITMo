@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Utente.create(id: 1, 'user_name': 'admin' 'password_digest': '', 'name': 'Amministratore', 'attivo': 1, 'amministratore': 1, 'note': 'Amministratore della procedura.')
 
 Sesso.create([{id: 1, sesso: 'Maschio'}, {id: 2, sesso: 'Femmina'}])
 
