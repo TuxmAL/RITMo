@@ -5,31 +5,28 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:user_name) %></th>
-      <th><%= model_class.human_attribute_name(:password_digest) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:attivo) %></th>
-      <th><%= model_class.human_attribute_name(:amministratore) %></th>
-      <th><%= model_class.human_attribute_name(:note) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th colspan="2">User Id</th>
+      <th>Nome</th>
+      <th align="center">Bloccato</th>
+      <th align="center"><%= model_class.human_attribute_name(:amministratore) %></th>
+      <th>UID</th>
+      <th>Creato</th>
+      <th>Ultimo aggiornamento</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @utenti.each do |utente| %>
       <tr>
-        <td><%= link_to utente.id, utente_path(utente) %></td>
-        <td><%= utente.user_name %></td>
-        <td><%= utente.password_digest %></td>
+        <td><%= link_to raw("#{content_tag('i', '', :class => 'fa fa-user-secret fa-2x')}"), utente, :class => 'btn btn-default btn-xs' %></td>
+        <td><%= link_to utente.user_name, utente %></td>
         <td><%= utente.name %></td>
-        <td><%= utente.attivo %></td>
-        <td><%= utente.amministratore %></td>
-        <td><%= utente.note %></td>
-        <td><%=l utente.created_at %></td>
+        <td align="center"><i class="fa fa-<%= 'un' if utente.attivo %>lock fa-2x"></i></td>
+        <td align="center"><i class="fa fa-<%= 'check-' if utente.amministratore %>square-o fa-2x"></i></td>
+        <td><%= utente.id %></td>
+        <td><%= utente.created_at.strftime('%d/%m/%Y') %></td>
+        <td><%= utente.updated_at.strftime('%d/%m/%Y') %></td>
         <td>
-          <%= link_to t('.show', :default => t("helpers.links.show")),
-                      utente_path(utente), :class => 'btn btn-default btn-xs' %>
           <%= link_to raw("#{content_tag('i', '', :class => 'fa fa-edit')} #{t('.edit', :default => t("helpers.links.edit"))}"),
                       edit_utente_path(utente), :class => 'btn btn-default btn-xs' %>
           <%= link_to raw("#{content_tag('i', '', :class => 'fa fa-trash')} #{t('.destroy', :default => t("helpers.links.destroy"))}"),
