@@ -33,7 +33,7 @@
         <td><%= anagrafica.comune.comune %></td>
         <td><%= anagrafica.datanascita %></td>
         <td><%= "#{anagrafica.parentela&.parentela} di #{anagrafica.parente&.cognome} #{anagrafica.parente&.nome}" unless anagrafica.parentela.blank? %></td>
-        <td><%= anagrafica.utente&.Cognome %></td>
+        <td><%= anagrafica.utente&.name %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_anagrafica_path(anagrafica), :class => 'btn btn-default btn-xs' %>
