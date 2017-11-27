@@ -28,9 +28,9 @@
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               anagrafiche_path, :class => 'btn btn-default'  %>
-<%= link_to t('.edit', :default => t("helpers.links.edit")),
+<%= link_to raw("#{content_tag('i', '', :class => 'fa fa-edit')} #{t('.edit', :default => t("helpers.links.edit"))}"),
               edit_anagrafica_path(@anagrafica), :class => 'btn btn-default' %>
-<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+<%= link_to raw("#{content_tag('i', '', :class => 'fa fa-trash')} #{t('.destroy', :default => t("helpers.links.destroy"))}"),
               anagrafica_path(@anagrafica),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
