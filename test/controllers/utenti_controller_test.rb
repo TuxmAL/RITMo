@@ -2,45 +2,45 @@ require 'test_helper'
 
 class UtentiControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @utento = utenti(:one)
+    @utente = utenti(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get utenti_url
     assert_response :success
   end
 
-  test "should get new" do
-    get new_utento_url
+  test 'should get new' do
+    get new_utente_url
     assert_response :success
   end
 
-  test "should create utento" do
+  test 'should create utente' do
     assert_difference('Utente.count') do
-      post utenti_url, params: { utento: { amministratore: @utento.amministratore, attivo: @utento.attivo, name: @utento.name, note: @utento.note, password: 'secret', password_confirmation: 'secret', user_name: @utento.user_name } }
+      post utenti_url, params: { utente: { amministratore: @utente.amministratore, attivo: @utente.attivo, name: @utente.name, note: @utente.note, password: 'secret', password_confirmation: 'secret', user_name: @utente.user_name } }
     end
 
-    assert_redirected_to utento_url(Utente.last)
+    assert_redirected_to utente_url(Utente.last)
   end
 
-  test "should show utento" do
-    get utento_url(@utento)
+  test 'should show utente' do
+    get utente_url(@utente)
     assert_response :success
   end
 
-  test "should get edit" do
-    get edit_utento_url(@utento)
+  test 'should get edit' do
+    get edit_utente_url(@utente)
     assert_response :success
   end
 
-  test "should update utento" do
-    patch utento_url(@utento), params: { utento: { amministratore: @utento.amministratore, attivo: @utento.attivo, name: @utento.name, note: @utento.note, password: 'secret', password_confirmation: 'secret', user_name: @utento.user_name } }
-    assert_redirected_to utento_url(@utento)
+  test 'should update utente' do
+    patch utente_url(@utente), params: { utente: { amministratore: @utente.amministratore, attivo: @utente.attivo, name: @utente.name, note: @utente.note, password: 'secret', password_confirmation: 'secret', user_name: @utente.user_name } }
+    assert_redirected_to utente_url(@utente)
   end
 
-  test "should destroy utento" do
+  test 'should destroy utente' do
     assert_difference('Utente.count', -1) do
-      delete utento_url(@utento)
+      delete utente_url(@utente)
     end
 
     assert_redirected_to utenti_url

@@ -1,1 +1,1 @@
-json.partial! "anagrafiche/anagrafica", anagrafica: @anagrafica
+json.partial! 'anagrafiche/anagrafica', anagrafica: @anagrafica

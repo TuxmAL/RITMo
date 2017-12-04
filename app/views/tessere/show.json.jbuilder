@@ -1,1 +1,1 @@
-json.partial! "tessere/tessera", tessera: @tessera
+json.partial! 'tessere/tessera', tessera: @tessera

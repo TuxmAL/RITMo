@@ -1,5 +1,5 @@
 class TessereController < ApplicationController
-  before_action :set_tessera, only: [:show, :edit, :update, :destroy]
+  before_action :set_tessera, only: %i[show edit update destroy]
 
   # GET /tessere
   # GET /tessere.json
@@ -62,13 +62,14 @@ class TessereController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_tessera
-      @tessera = Tessera.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def tessera_params
-      params.require(:tessera).permit(:id, :tiporichiesta_id, :anagrafico_id, :tipo_tessera_id, :intestatario_id, :qualifica_id, :statura, :string, :capelli, :occhi, :segni_particolari, :residenza_id, :indirizzo, :statocivile_id, :numero_tessera, :integer, :data_rilascio, :data_convalida, :variazioni_uno, :variazioni_due, :variazioni_tre, :note, :annullata, :stampata, :utente_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_tessera
+    @tessera = Tessera.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def tessera_params
+    params.require(:tessera).permit(:id, :tiporichiesta_id, :anagrafico_id, :tipo_tessera_id, :intestatario_id, :qualifica_id, :statura, :string, :capelli, :occhi, :segni_particolari, :residenza_id, :indirizzo, :statocivile_id, :numero_tessera, :integer, :data_rilascio, :data_convalida, :variazioni_uno, :variazioni_due, :variazioni_tre, :note, :annullata, :stampata, :utente_id)
+  end
 end

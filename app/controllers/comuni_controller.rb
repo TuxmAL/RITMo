@@ -1,5 +1,5 @@
 class ComuniController < ApplicationController
-  before_action :set_comune, only: [:show, :edit, :update, :destroy]
+  before_action :set_comune, only: %i[show edit update destroy]
 
   # GET /comuni
   # GET /comuni.json
@@ -62,13 +62,14 @@ class ComuniController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_comune
-      @comune = Comune.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def comune_params
-      params.fetch(:comune, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_comune
+    @comune = Comune.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def comune_params
+    params.fetch(:comune, {})
+  end
 end

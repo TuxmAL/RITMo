@@ -5,17 +5,17 @@ class ComuniControllerTest < ActionDispatch::IntegrationTest
     @comune = comuni(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get comuni_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_comune_url
     assert_response :success
   end
 
-  test "should create comune" do
+  test 'should create comune' do
     assert_difference('Comune.count') do
       post comuni_url, params: { comune: {  } }
     end
@@ -23,22 +23,22 @@ class ComuniControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to comune_url(Comune.last)
   end
 
-  test "should show comune" do
+  test 'should show comune' do
     get comune_url(@comune)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_comune_url(@comune)
     assert_response :success
   end
 
-  test "should update comune" do
+  test 'should update comune' do
     patch comune_url(@comune), params: { comune: {  } }
     assert_redirected_to comune_url(@comune)
   end
 
-  test "should destroy comune" do
+  test 'should destroy comune' do
     assert_difference('Comune.count', -1) do
       delete comune_url(@comune)
     end

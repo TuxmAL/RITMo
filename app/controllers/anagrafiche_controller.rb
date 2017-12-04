@@ -1,5 +1,5 @@
 class AnagraficheController < ApplicationController
-  before_action :set_anagrafica, only: [:show, :edit, :update, :destroy]
+  before_action :set_anagrafica, only: %i[show edit update destroy]
 
   # GET /anagrafiche
   # GET /anagrafiche.json
@@ -62,13 +62,14 @@ class AnagraficheController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_anagrafica
-      @anagrafica = Anagrafica.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def anagrafica_params
-      params.require(:anagrafica).permit(:id, :nome, :cognome, :sesso_id, :luogonascita_id, :datanascita, :parente_id, :parentela_id, :recapiti, :note, :utente_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_anagrafica
+    @anagrafica = Anagrafica.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def anagrafica_params
+    params.require(:anagrafica).permit(:id, :nome, :cognome, :sesso_id, :luogonascita_id, :datanascita, :parente_id, :parentela_id, :recapiti, :note, :utente_id)
+  end
 end

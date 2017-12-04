@@ -1,1 +1,1 @@
-json.partial! "comuni/comune", comune: @comune
+json.partial! 'comuni/comune', comune: @comune
