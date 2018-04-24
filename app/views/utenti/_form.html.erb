@@ -46,14 +46,14 @@
   <div class="form-group">
     <%= f.label :attivo, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :attivo, :class => 'form-control' %>
+      <%= f.check_box :attivo %>
     </div>
     <%=f.error_span(:attivo) %>
   </div>
   <div class="form-group">
     <%= f.label :amministratore, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :amministratore, :class => 'form-control' %>
+      <%= f.check_box :amministratore %>
     </div>
     <%=f.error_span(:amministratore) %>
   </div>
