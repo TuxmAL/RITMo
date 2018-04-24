@@ -16,21 +16,20 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :user_name, :class => 'control-label col-lg-2' %>
+    <%= f.label :user_name, 'Identificativo', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :user_name, :class => 'form-control' %>
     </div>
     <%=f.error_span(:user_name) %>
   </div>
   <div class="form-group">
-    <%= f.label :password_digest, :class => 'control-label col-lg-2' %>
+    <%= f.label :password_digest, 'Password', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.password_field :password_digest, :class => 'form-control' %>
     </div>
     <%=f.error_span(:password_digest) %>
   </div>
   <div class="form-group">
-    <%= f.label :name, :class => 'control-label col-lg-2' %>
     <%= label_tag :password_check, 'Ripeti password', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= password_field_tag :password_check, nil, :class => 'form-control' %>
@@ -38,6 +37,7 @@
     <%=f.error_span(:password_check) %>
   </div>
   <div class="form-group">
+    <%= f.label :name, 'Nome e cognome', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :name, :class => 'form-control' %>
     </div>
