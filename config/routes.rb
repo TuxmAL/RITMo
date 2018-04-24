@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: "tessere#index"
+
   resources :tessere
   resources :utenti
   resources :anagrafiche
