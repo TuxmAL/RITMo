@@ -31,7 +31,7 @@
         <td><%= link_to anagrafica.cognome, anagrafica %></td>
         <td><%= link_to anagrafica.nome, anagrafica %></td>
         <td><%= anagrafica.comune.comune %></td>
-        <td><%= anagrafica.datanascita %></td>
+        <td><%= l anagrafica.datanascita %></td>
         <td><%= "#{anagrafica.parentela&.parentela} di #{anagrafica.parente&.cognome} #{anagrafica.parente&.nome}" unless anagrafica.parentela.blank? %></td>
         <td><%= anagrafica.utente&.name %></td>
         <td>
