@@ -31,7 +31,15 @@
   <div class="form-group">
     <%= f.label :sesso_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :sesso_id, :class => 'form-control' %>
+      <div class="btn-group" aria-label="sesso" data-toggle="buttons">
+        <label class="btn btn-default<%= ' active' if @anagrafica.sesso_id == 1 %>">
+          <%= f.radio_button(:sesso_id, "1", :autocomplete => 'off') %> M
+        </label>
+        <label class="btn btn-default<%= ' active' if @anagrafica.sesso_id == 2 %>">
+          <%= f.radio_button(:sesso_id, "2", :autocomplete => 'off') %> F
+        </label>
+      </div>
+
     </div>
     <%=f.error_span(:sesso_id) %>
   </div>
